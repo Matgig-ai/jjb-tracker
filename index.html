@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJB Tracker - Ceinture Marron</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <span class="material-icons">military_tech</span>
+                </div>
+                <span>JJB Tracker</span>
+            </a>
+            <div class="nav-links">
+                <a class="nav-link active" data-page="techniques">Techniques</a>
+                <a class="nav-link" data-page="concepts">Concepts</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Techniques Page -->
+        <div id="techniquesPage" class="techniques-page active">
+            <header>
+                <div class="header-content">
+                    <div class="belt-icon">
+                        <span class="material-icons">military_tech</span>
+                    </div>
+                    <div>
+                        <h1>Progression Ceinture Marron JJB</h1>
+                        <p class="subtitle">75 techniques essentielles à maîtriser</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="controls">
+                <div class="search-box">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="searchInput" placeholder="Rechercher une technique...">
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="material-icons">view_list</span>
+                        Toutes
+                    </button>
+                    <button class="filter-btn" data-filter="learned">
+                        <span class="material-icons">school</span>
+                        Apprises
+                    </button>
+                    <button class="filter-btn" data-filter="practiced">
+                        <span class="material-icons">repeat</span>
+                        Répétées
+                    </button>
+                    <button class="filter-btn" data-filter="mastered">
+                        <span class="material-icons">emoji_events</span>
+                        Maîtrisées
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon total">
+                            <span class="material-icons">format_list_numbered</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalTechniques">75</h3>
+                            <p>Techniques totales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon learned">
+                            <span class="material-icons">school</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="learnedCount">0</h3>
+                            <p>Apprises</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon practiced">
+                            <span class="material-icons">repeat</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="practicedCount">0</h3>
+                            <p>Répétées 10x</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon mastered">
+                            <span class="material-icons">emoji_events</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="masteredCount">0</h3>
+                            <p>Enchaînées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categories-grid" id="categoriesContainer"></div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <span class="material-icons">search_off</span>
+                <h3>Aucune technique trouvée</h3>
+                <p>Essayez de modifier votre recherche ou vos filtres</p>
+            </div>
+        </div>
+
+        <!-- Concepts Page -->
+        <div id="conceptsPage" class="concepts-container">
+            <header>
+                <div class="header-content">
+                    <div class="belt-icon">
+                        <span class="material-icons">account_tree</span>
+                    </div>
+                    <div>
+                        <h1>Concepts & Enchaînements</h1>
+                        <p class="subtitle">Séquences tactiques par position et objectif</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="concept-grid" id="conceptsGrid"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="concepts.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
